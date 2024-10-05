@@ -54,3 +54,13 @@ function calculate() {
 // console.log(add("1\n2,3\n4"));   // 10
 // console.log(add("//;\n1;2"));    // 3
 // console.log(add("//;\n1;-22"));     // Error: negative numbers not allowed: -22
+
+
+
+const clearText= ()=> {
+    document.getElementById('inpStr').value='';
+    document.getElementById('result').innerHTML='';
+    document.getElementById('error').innerHTML='';
+    document.getElementById('history').innerHTML='';
+
+}
