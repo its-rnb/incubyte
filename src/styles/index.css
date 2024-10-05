@@ -1,0 +1,39 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 99%;
+
+}
+.container {
+    text-align: center; /* Center text inside container */
+    width: 300px;
+}
+
+.mb-2v{
+    margin-bottom: 2vh;
+}
+
+.pd{
+    padding: 5px 10px;
+}
+
+#calcBtn{
+    background-color: rgb(0, 119, 255);
+    cursor:pointer;
+    margin-right: 3px;
+}
+
+#clrTxt{
+    background-color: white;
+    cursor:pointer;
+    margin-left: 3px;
+}
+
+.bdr{
+    border-radius: 5px;
+    border: none;
+}
