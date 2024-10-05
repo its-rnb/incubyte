@@ -16,7 +16,7 @@ function add(numbers) {
     const ngtvNum = numberList.filter(n => n < 0);
 
     if (ngtvNum.length > 0) {
-        throw new Error(`Negative numbers not allowed-> ${ngtvNum.join(", ")}`);
+        throw new Error(`Negative numbers not allowed: ${ngtvNum.join(", ")}`);
     }
 
     return numberList.reduce((sum, n) => sum + (isNaN(n) ? 0 : n), 0);
