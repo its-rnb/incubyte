@@ -39,6 +39,8 @@ function calculate() {
 // iife to check if script attached
 (function () {console.log("Scripts loaded");})()
 
+
+//Test cases
 // console.log(add(""));            // 0
 // console.log(add("1"));           // 1
 // console.log(add("1,2,3"));       // 6
