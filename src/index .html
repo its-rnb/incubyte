@@ -8,11 +8,12 @@
 <body>
     <div id="mainDiv" class="container main">
         <h1 id="hd1">String Calculator</h1>
-        <textarea type="text" id="inpStr" placeholder="Enter String"></textarea>
+        <textarea type="text" id="inpStr" placeholder="Enter String" rows="1" cols="50"></textarea>
+        <br>
         <button type="button" id="calcBtn" onclick="calculate()">Calculate</button>
         <div id="error"></div>
         <div id="result"></div>
-        <div id="history"></div>
+        <div id="history">History: </div>
     </div>
     <script src="../src/scripts/strCalc.js"></script>
 </body>

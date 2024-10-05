@@ -4,7 +4,7 @@ function add(numbers) {
     numbers= String(numbers || "");
 
     numbers = numbers.replace(/\\n/g, '\n');
-    
+
     let delimiter = /,|\n/;
     if (numbers.startsWith("//")) {
         const delimiterMatch = numbers.match(/^\/\/(.+)\n/);
@@ -26,6 +26,7 @@ function calculate() {
     const str = document.getElementById('inpStr').value;
     const rslt = document.getElementById('result');
     const err = document.getElementById('error');
+    const hstr = document.getElementById('history');
 
     console.log(rslt);
     rslt.innerHTML = '';
@@ -36,6 +37,7 @@ function calculate() {
         const result = add(str);
         console.log("Try block" +rslt);
         rslt.innerHTML = `Result: ${result}`;
+        hstr.innerHTML+= `${result}; `
     } catch (error) {
         err.innerHTML = error.message;
     }
