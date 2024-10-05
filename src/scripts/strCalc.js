@@ -13,29 +13,24 @@ function add(numbers) {
     }
 
     const numberList = numbers.split(delimiter).map(Number);
-    const negativeNumbers = numberList.filter(n => n < 0);
+    const ngtvNum = numberList.filter(n => n < 0);
 
-    if (negativeNumbers.length > 0) {
-        throw new Error(`negative numbers not allowed: ${negativeNumbers.join(", ")}`);
+    if (ngtvNum.length > 0) {
+        throw new Error(`Negative numbers not allowed-> ${ngtvNum.join(", ")}`);
     }
 
     return numberList.reduce((sum, n) => sum + (isNaN(n) ? 0 : n), 0);
 }
 
 function calculate() {
+
     const str = document.getElementById('inpStr').value;
     const rslt = document.getElementById('result');
     const err = document.getElementById('error');
     const hstr = document.getElementById('history');
 
-    console.log(rslt);
-    rslt.innerHTML = '';
-    err.innerHTML = '';
-    console.log(rslt);
-
     try {
         const result = add(str);
-        console.log("Try block" +rslt);
         rslt.innerHTML = `Result: ${result}`;
         hstr.innerHTML+= `${result}; `
     } catch (error) {
@@ -61,6 +56,6 @@ const clearText= ()=> {
     document.getElementById('inpStr').value='';
     document.getElementById('result').innerHTML='';
     document.getElementById('error').innerHTML='';
-    document.getElementById('history').innerHTML='';
+    document.getElementById('history').innerHTML='History: ';
 
 }
